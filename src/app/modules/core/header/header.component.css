@@ -1,0 +1,7 @@
+.container-header {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+}

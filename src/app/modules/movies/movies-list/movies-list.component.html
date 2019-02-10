@@ -1,0 +1,11 @@
+<div>
+    <section class="container-search">
+        <input name="searchInput" [(ngModel)]="searchInput" placeholder="Busque um filme por nome, ano ou gênero...">
+    </section>
+
+    <section>
+      <div class="container-movies" *ngFor="let movie of movies">
+          <app-movie [movie]="movie" (goToSelectMovie)="selecetMovie($event)" (goToSelectGenre)="selectGenre($event)"></app-movie>
+      </div>
+    </section>
+</div>

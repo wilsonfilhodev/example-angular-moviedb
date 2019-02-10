@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset all default config CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  /* box-sizing: border-box; */
+  font-weight: normal;
+  font-family: var(--primary-font);
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Variables */
+
+:root {
+  --primary-color: #116192;
+  --secondary-color: #01e5e6;
+  --background-color: #ffffff;
+  --gray-light: #ebebeb;
+  --gray-dark: #555555;
+  --primary-font: Abel;
+  --secondary-font: Lato;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: Abel;
+  src: url('../src/assets/fonts/Abel-Regular.ttf');
+}
+
+@font-face {
+  font-family: Lato;
+  src: url('../src/assets/fonts/Lato-Light.ttf');
+}

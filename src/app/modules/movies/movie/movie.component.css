@@ -1,0 +1,145 @@
+img {
+  height: 100%;
+}
+
+h1 {
+  font-size: 2.5vmax;
+}
+
+.movie-info {
+  height: 100%;
+  background-color: var(--gray-light);
+}
+
+.movie-header {
+  display: flex;
+  align-items: flex-end;
+  height: 5vmax;
+  min-height: 2rem;
+  padding: 0 0 0 8.4vmax;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.movie-popularity {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5vmax;
+  height: 5vmax;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: .3vmax solid var(--secondary-color);
+  box-shadow: 0 0 0 .2vmax var(--primary-color);
+  position: absolute;
+  margin: -3.1vmax 1.5vmax 2vmax;
+  color: var(--secondary-color);
+}
+
+.movie-popularity > p {
+  font-size: 2vmax;
+}
+
+.movie-release {
+  padding: 0 0 0 8.4vmax;
+  color: var(--gray-dark);
+}
+
+.movie-release > p {
+  margin-top: .3vmax;
+  font-size: 1.5vmax;
+  opacity: .5;
+}
+
+.movie-content {
+  position: relative;
+  padding: 0 1.5vmax 1vmax;
+  /* max-height: 12vmax; */
+  margin: 2vmax 0;
+}
+
+.movie-content > p {
+  font-family: var(--secondary-font);
+  /* max-height: 13vmax;
+  overflow: auto; */
+}
+
+.movie-buttons-genre {
+  padding: 0 1.5vmax;
+}
+
+.movie-buttons-genre > .button {
+  border: solid 1px var(--primary-color);
+  background-color: white;
+  border-radius: 1.5vmax;
+  padding: 0 1.5vmax;
+  margin-right: 1vmax;
+}
+
+.section-content {
+  overflow: hidden;
+  padding-bottom: 1rem;
+  background-color: var(--gray-light);
+}
+
+.section-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.poster {
+  width: 100%;
+}
+
+/* Medias Querie */
+
+@media (max-width: 620px) {
+  .grid-box {
+    column-count: 1;
+    column-gap: 0px;
+  }
+
+  .movie-header {
+    height: 3rem;
+    padding: 0 0 0 4.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .movie-popularity {
+    width: 3rem;
+    height: 3rem;
+    margin: -1.5rem .7rem;
+  }
+
+  .movie-popularity > p {
+    font-size: 1.2rem;
+  }
+
+  .movie-release {
+    padding: 0 0 0 4.5rem;
+  }
+
+  .movie-release > p {
+    margin-top: .2rem;
+    font-size: 1rem;
+  }
+
+  .movie-buttons-genre > .button {
+    border: solid 1px var(--primary-color);
+    border-radius: .75rem;
+    padding: 0 1rem;
+    margin-right: .5rem;
+  }
+
+}
+
+@media (min-width: 621px) {
+  .grid-box {
+     display: grid;
+     grid-template-columns: 1.3fr 4fr;
+  }
+
+}
