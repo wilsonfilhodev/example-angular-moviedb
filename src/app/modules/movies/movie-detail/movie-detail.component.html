@@ -1,0 +1,55 @@
+<div class="container">
+    <section class="movie-header">
+        <h1 class="title">{{movie.title}}</h1>
+        <time class="release">{{ movie.releaseDate | date: 'dd/MM/y' }}</time>
+    </section>
+    <section class="movie-content">
+        <div class="box-left">
+            <h2 class="subtitle">Sinopse</h2>
+            <article class="content-info">{{movie.overview || 'Sem informções'}}</article>
+            <h2 class="subtitle">Informações</h2>
+            <div class="movie-content-informations">
+                <div class="information-item">
+                    <h3>Situação</h3>
+                    <p class="content">{{movie.status || 'Sem informções'}}</p>
+                </div>
+                <div class="information-item">
+                    <h3>Idioma</h3>
+                    <p>{{movie.language || 'Sem informções'}}</p>
+                </div>
+                <div class="information-item">
+                    <h3>Duração</h3>
+                    <p>{{movie.runtime || 'Sem informções'}}</p>
+                </div>
+                <div class="information-item">
+                    <h3>Orçamento</h3>
+                    <p>{{(movie.budget | currency) || 'Sem informções'}}</p>
+                </div>
+                <div class="information-item">
+                    <h3>Receita</h3>
+                    <p>{{ (movie.revenue | currency) || 'Sem informções'}}</p>
+                </div>
+                <div class="information-item">
+                    <h3>Lucro</h3>
+                    <p>{{ (movie.profet | currency) || 'Sem informções'}}</p>
+                </div>
+            </div>
+            <div class="display-flex extra-info">
+                <div class="display-flex tooltips">
+                    <span *ngFor="let genre of movie.genres" (click)="searchGenre(genre.id)" class=" tooltip-item ">{{genre.name}}</span>
+                </div>
+                <div class="display-flex percentual-circle ">
+                    <div class="circle ">
+                        {{movie.voteAverage | percent:'2.0-0'}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box-right ">
+            <!-- <img [src]="movie.posterPath " [alt]="movie.title " [title]="movie.title "> -->
+        </div>
+    </section>
+    <section *ngIf="movie.trailer" class="trailer">
+        <iframe title="YouTube Trailer" width="560" height="349" class="video-frame" [src]="domSanitizer.bypassSecurityTrustResourceUrl(movie?.trailer)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+  </div>

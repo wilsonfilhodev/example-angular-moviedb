@@ -38,3 +38,30 @@ h1 {
   font-family: Lato;
   src: url('../src/assets/fonts/Lato-Light.ttf');
 }
+
+/* Override styles ngx-pagination */
+
+.ngx-pagination .current {
+  background: var(--primary-color) !important;
+  color: var(--secondary-color) !important;
+  border: solid 2px var(--secondary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.95rem !important;
+}
+
+.ngx-pagination {
+  margin-bottom: 0rem !important;
+}
+
+.ngx-pagination a {
+  color: var(--primary-color) !important;
+  font-size: large;
+}
+
+.ngx-pagination a:hover,
+.ngx-pagination button:hover {
+    background: none !important;
+    color: var(--secondary-color) !important;
+}

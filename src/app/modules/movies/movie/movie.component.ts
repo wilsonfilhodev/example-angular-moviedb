@@ -7,9 +7,9 @@ import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 })
 export class MovieComponent implements OnInit {
 
-  @Output() goToSelectMovie = new EventEmitter<string>();
+  @Output() goToSelectMovie = new EventEmitter<number>();
 
-  @Output() goToSelectGenre = new EventEmitter<string>();
+  @Output() goToSelectGenre = new EventEmitter<number>();
 
   @Input() movie;
 
@@ -18,11 +18,11 @@ export class MovieComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectMovie(idFilme: string) {
-    this.goToSelectMovie.emit(idFilme);
+  selectMovie(id: number) {
+    this.goToSelectMovie.emit(id);
   }
 
-  selectGenre(idGenre: string) {
-    this.goToSelectGenre.emit(idGenre);
+  selectGenre(id: number) {
+    this.goToSelectGenre.emit(id);
   }
 }

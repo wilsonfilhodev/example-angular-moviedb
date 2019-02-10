@@ -1,22 +1,22 @@
 <div class="grid-box">
-    <section>
+    <section (click)="selectMovie(movie.id)">
       <img class="section-img poster" [src]="movie.posterPath" [title]="movie.title" [alt]="movie.title">
     </section>
     <section class="section-content">
-        <div class="movie-header">
+        <div class="movie-header" (click)="selectMovie(movie.id)">
             <h1>{{movie.title}}</h1>
         </div>
-        <div class="movie-popularity">
+        <div class="movie-average">
             <p>{{movie.voteAverage | percent:'2.0-0'}}</p>
         </div>
         <div class="movie-release">
             <p>{{movie.releaseDate | date: 'dd/MM/y' }}</p>
         </div>
         <div class="movie-content">
-            <p>{{movie.overview}}</p>
+            <p>{{movie.overview || 'Sem informações'}}</p>
         </div>
         <div class="movie-buttons-genre">
-            <span *ngFor="let genre of movie.movieGenre" (click)="sendGenre(genre.id)" class="button">{{genre.name}}</span>
+            <span *ngFor="let genre of movie.genres" (click)="selectGenre(genre.id)" class="button">{{genre.name}}</span>
         </div>
     </section>
   </div>

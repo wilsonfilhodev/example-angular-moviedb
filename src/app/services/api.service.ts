@@ -24,4 +24,8 @@ export class ApiService {
   public getPopularMovies(page: number) {
     return this.httpClient.get<any[]>(`${this.urlPopular}&page=${page}`);
   }
+
+  public getMovieById(id: number) {
+    return this.httpClient.get<any>(`${Utils.apiURL}movie/${id}?api_key=${Utils.apiKey}&language=pt-BR`);
+  }
 }

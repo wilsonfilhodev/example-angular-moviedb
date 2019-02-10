@@ -21,7 +21,7 @@ h1 {
   background-color: var(--primary-color);
 }
 
-.movie-popularity {
+.movie-average {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@ h1 {
   color: var(--secondary-color);
 }
 
-.movie-popularity > p {
+.movie-average > p {
   font-size: 2vmax;
 }
 
@@ -108,13 +108,13 @@ h1 {
     font-size: 1.5rem;
   }
 
-  .movie-popularity {
+  .movie-average {
     width: 3rem;
     height: 3rem;
     margin: -1.5rem .7rem;
   }
 
-  .movie-popularity > p {
+  .movie-average > p {
     font-size: 1.2rem;
   }
 

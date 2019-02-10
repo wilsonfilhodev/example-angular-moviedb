@@ -1,8 +1,10 @@
+import { Genre } from './../../../models/genre';
+import { element } from 'protractor';
+import { Router } from '@angular/router';
 import { Utils } from './../../../models/utils';
 import { Movie } from './../../../models/movie';
 import { ApiService } from './../../../services/api.service';
 import { Component, OnInit } from '@angular/core';
-import { log } from 'util';
 
 @Component({
   selector: 'app-movies-list',
@@ -11,18 +13,22 @@ import { log } from 'util';
 })
 export class MoviesListComponent implements OnInit {
 
-  private searchInput: string;
+  public p = 1;
+  public movies = new Array<Movie>();
+  public searchInput: string;
+  private mapGenres = new Map();
 
-  movies = new Array<Movie>();
-
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+    private router: Router
+    ) { }
 
   ngOnInit() {
-    this.getPopularMovies(1);
+    this.initialize();
   }
 
-  selectMovie(event: Event) {
-    console.log('Called select movie...' , event);
+  goToMovie(id: number) {
+    this.router.navigate(['/movie', id]);
   }
 
   selectGenre(event: Event) {
@@ -31,29 +37,40 @@ export class MoviesListComponent implements OnInit {
 
   private searchMovie(query: string, page: number) {
     this.apiService.getMovies(query, page).subscribe((res) => {
-      console.log(res);
+    });
+  }
+
+  private initialize() {
+    this.apiService.getGenres().subscribe((res: any) => {
+      this.mapGenres = new Map(res.genres.map((genre: any) => [genre.id, genre.name]));
+      this.getPopularMovies(1);
     });
   }
 
   private getPopularMovies(page: number) {
-    this.apiService.getPopularMovies(page).subscribe((res) => {
-      console.log(res);
+    this.apiService.getPopularMovies(page).subscribe((res: any) => {
       if (res) {
-        this.parseResponseToMovie(res);
+        this.movies = this.parseResponseToMovie(res);
       }
     });
   }
 
-  private parseResponseToMovie(res: any) {
-    this.movies = res.results.map( (movie: any) => (
+  private parseResponseToMovie(res: any): Movie[] {
+    return res.results.map( (movie: any) => (
       {
         id: movie.id,
         title: movie.title,
-        voteAverage: Number(movie.vote_average) / 10,
+        voteAverage: movie.vote_average / 10,
         releaseDate: movie.release_date,
-        overview: movie.overview || 'Nenhum resumo cadastrado para este filme.',
+        overview: movie.overview,
         posterPath: `${Utils.baseUrlPoster600w}${movie.poster_path}`,
-        genres: []
+        genres: this.getGenresThisMovie(movie)
       }));
+  }
+
+  private getGenresThisMovie(movie: any): Genre[] {
+    return movie.genre_ids.map( (id: number) => (
+      { id, name: this.mapGenres.get(id) }
+    ));
   }
 }
