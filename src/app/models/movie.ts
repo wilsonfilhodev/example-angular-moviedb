@@ -15,4 +15,5 @@ export class Movie {
   revenue: number;
   profet: number;
   trailer: string;
+  posterPath: string;
 }

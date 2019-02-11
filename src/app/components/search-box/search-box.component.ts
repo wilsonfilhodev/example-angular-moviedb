@@ -13,6 +13,7 @@ import { Movie } from './../../models/movie';
 })
 export class SearchBoxComponent implements OnInit {
 
+  searchInput = '';
   @Output() loading = new EventEmitter<boolean>();
   @Output() results = new EventEmitter<Movie[]>();
 
