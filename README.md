@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://angular.io/">
-    <img src="https://www.angularexampleapp.com/assets/images/angular.svg" alt="Logo" width=72 height=72>
+    <img src="https://github.com/wilsonfilhodev/example-angular-moviedb/blob/master/src/assets/img/angular_moviedb.png?raw=true" alt="Logo" width=300>
   </a>
 
   <h3 align="center">Angular 7 and Moviedb API</h3>
