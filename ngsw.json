@@ -10,7 +10,7 @@
         "/example-angular-moviedb/es2015-polyfills.12eccedba99646c7daca.js",
         "/example-angular-moviedb/favicon.ico",
         "/example-angular-moviedb/index.html",
-        "/example-angular-moviedb/main.7ddafcf9d5a1a1977454.js",
+        "/example-angular-moviedb/main.68d8934ea9b50534ae9c.js",
         "/example-angular-moviedb/polyfills.407a467dedb63cfdd103.js",
         "/example-angular-moviedb/runtime.a5dd35324ddfd942bef1.js",
         "/example-angular-moviedb/styles.36df8aadbcaa30f7cfcc.css"
@@ -33,6 +33,7 @@
         "/example-angular-moviedb/assets/icons/icon-48x48.png",
         "/example-angular-moviedb/assets/icons/icon-72x72.png",
         "/example-angular-moviedb/assets/icons/icon-96x96.png",
+        "/example-angular-moviedb/assets/img/angular_moviedb.png",
         "/example-angular-moviedb/assets/img/loading.svg",
         "/example-angular-moviedb/assets/img/no-poster.jpg",
         "/example-angular-moviedb/assets/img/poste-example.jpg"
@@ -65,13 +66,14 @@
     "/example-angular-moviedb/assets/icons/icon-48x48.png": "848eee182840c04a8a33d0e8ac1328f97743d9ee",
     "/example-angular-moviedb/assets/icons/icon-72x72.png": "8d1b3813d564379186cffdeffb034c2b149b9ed9",
     "/example-angular-moviedb/assets/icons/icon-96x96.png": "eedbb70e7d7ce85666fc4b5c73900f1e4ada09a5",
+    "/example-angular-moviedb/assets/img/angular_moviedb.png": "beb48113d20b920817679d805964fba64cde0dba",
     "/example-angular-moviedb/assets/img/loading.svg": "11d6e896eaaadd5ce37400116650e1272ec28f19",
     "/example-angular-moviedb/assets/img/no-poster.jpg": "8600966aef3153e5f346a2714f1760ac9e488137",
     "/example-angular-moviedb/assets/img/poste-example.jpg": "669bf177198413e8f02a7427f0a8214f123fbbc6",
     "/example-angular-moviedb/es2015-polyfills.12eccedba99646c7daca.js": "e546b81560cf13f04d7e6a3944e5e3087f131356",
     "/example-angular-moviedb/favicon.ico": "7cb7d5aeae4949d186b9aa71c006e2f0174a1693",
-    "/example-angular-moviedb/index.html": "019aa30a2ff26e145337d4fca5b2ab25909f4014",
-    "/example-angular-moviedb/main.7ddafcf9d5a1a1977454.js": "96f93bbc5299a2af1918161737b65177711b8f49",
+    "/example-angular-moviedb/index.html": "6b901e83494a3227eddabefe2802ca8f2e077648",
+    "/example-angular-moviedb/main.68d8934ea9b50534ae9c.js": "7c69092ef7d52c6d8f388da3eb48163767ceb6da",
     "/example-angular-moviedb/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
     "/example-angular-moviedb/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
     "/example-angular-moviedb/styles.36df8aadbcaa30f7cfcc.css": "8fe16e822ee1b100ab2bf4f18961bd6195d9f391"
