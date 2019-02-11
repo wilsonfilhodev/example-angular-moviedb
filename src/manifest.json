@@ -3,8 +3,8 @@
   "short_name": "Moviedb",
   "theme_color": "#116192",
   "background_color": "#ffffff",
-  "display": "browser",
-  ​​"orientation": "portrait",
+  "display": "standalone",
+  "orientation" : "portrait",
   "scope": "/",
   "start_url": "/?utm_source=homescreen",
   "icons": [

@@ -1,19 +1,24 @@
 <div class="container">
+  <section>
+    <app-search-box (loading)="loading = $event" (results)="updateResults($event)"></app-search-box>
+  </section>
+
+  <div class="container-loading" *ngIf="loading">
+    <img src='assets/img/loading.svg' />
+  </div>
+
+  <div *ngIf="!loading && movies.length">
     <section>
-        <app-search-box (loading)="loading = $event" (results)="updateResults($event)"></app-search-box>
-    </section>
-
-    <div class="container-loading" *ngIf="loading">
-        <img src='assets/img/loading.svg' />
-    </div>
-
-    <section *ngIf="!loading">
       <div class="container-movies" *ngFor="let movie of movies | paginate: { itemsPerPage: 5, currentPage: p }">
           <app-movie [movie]="movie" (goToSelectMovie)="goToMovie($event)" (goToSelectGenre)="selectGenre($event)"></app-movie>
       </div>
     </section>
-
     <section class="pagination">
         <pagination-controls (pageChange)="p = $event" directionLinks="false" ></pagination-controls>
     </section>
+  </div>
+
+  <div class="no-data" *ngIf="!loading && !movies.length">
+    <p>Nenhum registro encontrado.</p>
+  </div>
 </div>

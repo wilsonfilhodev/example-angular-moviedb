@@ -16,7 +16,6 @@ export class ApiService {
 
   urlSearch = `${Utils.apiURL}search/movie?api_key=${Utils.apiKey}&sort_by=original_title.asc&language=pt-BR`;
   urlSearchByGenre = `${Utils.apiURL}discover/movie?api_key=${Utils.apiKey}&sort_by=original_title.asc&language=pt-BR&with_genres=`;
-  urlSearchYear = `${Utils.apiURL}discover/movie?api_key=${Utils.apiKey}&sort_by=original_title.asc&language=pt-BR&primary_release_year=`;
   urlPopular = `${Utils.apiURL}movie/popular?api_key=${Utils.apiKey}&language=pt-BR`;
   urlGenres = `${Utils.apiURL}genre/movie/list?api_key=${Utils.apiKey}&language=pt-BR`;
 
@@ -74,10 +73,8 @@ export class ApiService {
       return this.getPopularMoviesObservable(page);
     } else {
       const genre = this.isGenre(query);
-      const year = this.isYear(query);
       if (genre) { return this.findMovieByGenreSearch(genre); }
-      if (year) { return this.findMovieByYearSearc(year); }
-      if (!genre && !year) { return this.findMovieByTermSearch(query, page); }
+      if (!genre) { return this.findMovieByTermSearch(query, page); }
     }
   }
 
@@ -104,14 +101,6 @@ export class ApiService {
     return this.httpClient.get<any>(`${this.urlPopular}&page=${page}`).pipe(map((response: any) => {
       return response.results.map((item: any) => {
         return this.parseResponseToMovie(item);
-      });
-    }));
-  }
-
-  private findMovieByYearSearc(year: number) {
-    return this.httpClient.get<any>(`${this.urlSearchYear}${year}`).pipe(map((response: any) => {
-      return response.results.map((item: any) => {
-        return this.parseResponseToMovie(item) ;
       });
     }));
   }
