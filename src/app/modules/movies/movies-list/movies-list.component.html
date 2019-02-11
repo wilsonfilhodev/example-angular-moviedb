@@ -9,12 +9,12 @@
 
   <div *ngIf="!loading && movies.length">
     <section>
-      <div class="container-movies" *ngFor="let movie of movies | paginate: { itemsPerPage: 5, currentPage: p }">
+      <div class="container-movies" *ngFor="let movie of movies | paginate: { itemsPerPage: 5, currentPage: page }">
           <app-movie [movie]="movie" (goToSelectMovie)="goToMovie($event)" (goToSelectGenre)="selectGenre($event)"></app-movie>
       </div>
     </section>
     <section class="pagination">
-        <pagination-controls (pageChange)="p = $event" directionLinks="false" ></pagination-controls>
+        <pagination-controls (pageChange)="pageChange($event)" directionLinks="false" ></pagination-controls>
     </section>
   </div>
 

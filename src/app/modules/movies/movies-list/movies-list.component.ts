@@ -14,11 +14,10 @@ import { NgxUiLoaderService } from 'ngx-ui-loader';
 })
 export class MoviesListComponent implements OnInit {
 
-  public p = 1;
   public loading: boolean;
   public movies = new Array<Movie>();
-  public searchInput: string;
   private mapGenres = new Map();
+  public page = 1;
 
   constructor(
     private loadingService: NgxUiLoaderService,
@@ -37,11 +36,16 @@ export class MoviesListComponent implements OnInit {
   async selectGenre(id: number) {
     const result = await this.apiService.getMoviesByGenre(id);
     this.movies = this.parseResponseToMovie(result);
-    window.scroll(0, 0);
+    this.toUp();
   }
 
   updateResults(event: any) {
     this.movies = event;
+  }
+
+  pageChange(page: number) {
+    this.page = page;
+    this.toUp();
   }
 
   private async initialize() {
@@ -61,14 +65,18 @@ export class MoviesListComponent implements OnInit {
         voteAverage: movie.vote_average / 10,
         releaseDate: movie.release_date,
         overview: movie.overview,
-        posterPath: `${Utils.baseUrlPoster600w}${movie.poster_path}`,
+        posterPath: movie.poster_path ? `${Utils.baseUrlPoster600w}${movie.poster_path}` : 'assets/img/no-poster.jpg',
         genres: this.getGenresThisMovie(movie)
       }));
-  }
+    }
 
   private getGenresThisMovie(movie: any): Genre[] {
-    return movie.genre_ids.map( (id: number) => (
-      { id, name: this.mapGenres.get(id) }
+  return movie.genre_ids.map( (id: number) => (
+    { id, name: this.mapGenres.get(id) }
     ));
+  }
+
+  private toUp() {
+    window.scroll(0, 0);
   }
 }
