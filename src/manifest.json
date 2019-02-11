@@ -6,7 +6,7 @@
   "display": "browser",
   ​​"orientation": "portrait",
   "scope": "/",
-  "start_url": "/example-angular-moviedb",
+  "start_url": "/?utm_source=homescreen",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
