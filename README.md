@@ -1,10 +1,10 @@
 <p align="center">
   <a href="https://angular.io/">
-      ![Demo Animation](/src/assets/img/angular_moviedb.png?raw=true)
-    <img src="https://www.angularexampleapp.com/assets/images/angular.svg" alt="Logo" width=72 height=72>
+    <img src="/src/assets/img/angular_moviedb.png?raw=true" alt="Angular and Moviedb" width=300>
   </a>
 
   <h3 align="center">Angular 7 and Moviedb API</h3>
+  <h4 align="center">https://wilsonfilhodev.github.io/example-angular-moviedb</h4>
 
   <p align="center">
     This example app shows how to build a basic app with Angular 7 and Moviedb API.
