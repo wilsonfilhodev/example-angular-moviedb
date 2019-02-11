@@ -6,6 +6,7 @@
   "display": "standalone",
   "orientation" : "portrait",
   "scope": "/",
+  "start_url": "/?utm_source=homescreen",
   "icons": [
     {
       "src": "assets/icons/icon-36x36.png",
