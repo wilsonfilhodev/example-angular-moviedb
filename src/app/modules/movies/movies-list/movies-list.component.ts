@@ -41,6 +41,7 @@ export class MoviesListComponent implements OnInit {
 
   updateResults(event: any) {
     this.movies = event;
+    this.page = 1;
   }
 
   pageChange(page: number) {
