@@ -4,7 +4,7 @@
   </a>
 
   <h3 align="center">Angular 7 and Moviedb API</h3>
-  <h2 align="center">[Show application](https://wilsonfilhodev.github.io/example-angular-moviedb)</h2>
+  <h4 align="center">[Show App](https://wilsonfilhodev.github.io/example-angular-moviedb)</h4>
 
   <p align="center">
     This example app shows how to build a basic app with Angular 7 and Moviedb API.
