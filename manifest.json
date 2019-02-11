@@ -3,7 +3,7 @@
   "short_name": "Moviedb",
   "theme_color": "#116192",
   "background_color": "#ffffff",
-  "display": "standalone",
+  "display": "browser",
   "scope": "/",
   "start_url": "/",
   "icons": [
