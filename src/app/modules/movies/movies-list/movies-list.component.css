@@ -29,3 +29,9 @@
   width: 15vmax;
   max-width: 4rem;
 }
+
+@media (max-width: 540px) {
+  .container {
+    padding: 2rem 0;
+  }
+}

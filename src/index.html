@@ -9,25 +9,24 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#116192">
-
   <style>
       /* https://codepen.io/mrrocks/pen/EiplA */
-  html,
+      html,
       body {
         height: 100%;
         margin: 0px;
       }
-  .contentChart {
+      .contentChart {
         height: 100%;
         display: flex !important;
         align-items: center;
         justify-content: center;
       }
-  .spinner {
+      .spinner {
         -webkit-animation: rotator 1.4s linear infinite;
         animation: rotator 1.4s linear infinite;
       }
-  @-webkit-keyframes rotator {
+      @-webkit-keyframes rotator {
         0% {
           -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -37,7 +36,7 @@
           transform: rotate(270deg);
         }
       }
-  @keyframes rotator {
+      @keyframes rotator {
         0% {
           -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -47,7 +46,7 @@
           transform: rotate(270deg);
         }
       }
-  .path {
+      .path {
         stroke-dasharray: 187;
         stroke-dashoffset: 0;
         -webkit-transform-origin: center;
@@ -55,7 +54,7 @@
         -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
         animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
       }
-  @-webkit-keyframes colors {
+      @-webkit-keyframes colors {
         0% {
           stroke: #4285F4;
         }
@@ -72,7 +71,7 @@
           stroke: #4285F4;
         }
       }
-  @keyframes colors {
+      @keyframes colors {
         0% {
           stroke: #4285F4;
         }
@@ -89,7 +88,7 @@
           stroke: #4285F4;
         }
       }
-  @-webkit-keyframes dash {
+      @-webkit-keyframes dash {
         0% {
           stroke-dashoffset: 187;
         }
@@ -104,7 +103,7 @@
           transform: rotate(450deg);
         }
       }
-  @keyframes dash {
+      @keyframes dash {
         0% {
           stroke-dashoffset: 187;
         }
@@ -120,12 +119,11 @@
         }
       }
     </style>
-
 </head>
 <body>
   <noscript>
     <h3 style="color:#116192; font-family: Helvetica; margin: 2rem;">
-        Aplicativo indisponível.
+        Por favor ative o JavaScript para continuar usando este aplicativo.
     </h3>
   </noscript>
   <app-root>

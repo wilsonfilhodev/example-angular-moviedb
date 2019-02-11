@@ -23,5 +23,17 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "moviedb-api",
+      "urls": ["https://api.themoviedb.org/3/"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 10000,
+        "maxAge": "6h",
+        "timeout": "5s"
+      }
+    }
   ]
 }
