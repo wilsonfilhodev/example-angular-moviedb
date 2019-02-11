@@ -1,8 +1,8 @@
 {
-  "name": "example-angular-moviedb",
-  "short_name": "example-angular-moviedb",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Angular + Moviedb",
+  "short_name": "Moviedb",
+  "theme_color": "#116192",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
