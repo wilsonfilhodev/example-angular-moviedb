@@ -13,6 +13,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class MovieDetailComponent implements OnInit {
 
   public movie = new Movie();
+  public trailer = '';
+  public id: number;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,24 +23,29 @@ export class MovieDetailComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    const id =  this.route.snapshot.params.id;
+    this.route.params.subscribe(params => this.id = params.id);
 
-    if (id) {
-      this.getMovie(id);
+    if (this.id) {
+      this.getMovie(this.id);
     }
   }
 
-  private getMovie(id: number) {
-    this.apiService.getMovieById(id).subscribe((res: any) => {
-        console.log(res);
-        if (res) {
-          this.parseResponseToMovie(res);
-        }
-    });
+  private async getMovie(id: number) {
+    const response = await this.apiService.getMovieById(id);
+    if (response) {
+      this.movie = this.parseResponseToMovie(response);
+      const keyTrailer = await this.apiService.getTrailer(id);
+      this.trailer = this.getTrailerMovie(keyTrailer);
+    }
   }
 
+  private getTrailerMovie(keyTrailer: any): string {
+    if (keyTrailer.results.length) {
+      return `${Utils.pathTrailerYoutube}${keyTrailer.results[0].key}`;
+    }
+  }
   private parseResponseToMovie(res: any) {
-    const movie = {
+    return {
         id: res.id,
         title: res.title,
         voteAverage: res.vote_average / 10,
@@ -47,7 +54,7 @@ export class MovieDetailComponent implements OnInit {
         posterPath: `${Utils.baseUrlPoster600w}${res.poster_path}`,
         genres: res.genres,
         status: res.status,
-        language: res.language,
+        language: res.spoken_languages ? res.spoken_languages[0].name : '',
         runtime: res.runtime,
         video: res.video,
         budget: res.budget,
@@ -55,6 +62,5 @@ export class MovieDetailComponent implements OnInit {
         profet: res.revenue,
         trailer: res.trailer
       };
-    this.movie = movie;
   }
 }

@@ -3,8 +3,8 @@
       <img class="section-img poster" [src]="movie.posterPath" [title]="movie.title" [alt]="movie.title">
     </section>
     <section class="section-content">
-        <div class="movie-header" (click)="selectMovie(movie.id)">
-            <h1>{{movie.title}}</h1>
+        <div class="movie-header">
+            <h1 (click)="selectMovie(movie.id)">{{movie.title}}</h1>
         </div>
         <div class="movie-average">
             <p>{{movie.voteAverage | percent:'2.0-0'}}</p>
@@ -16,7 +16,7 @@
             <p>{{movie.overview || 'Sem informações'}}</p>
         </div>
         <div class="movie-buttons-genre">
-            <span *ngFor="let genre of movie.genres" (click)="selectGenre(genre.id)" class="button">{{genre.name}}</span>
+            <button type="button" *ngFor="let genre of movie.genres" (click)="selectGenre(genre.id)" class="buttons-genre">{{genre.name}}</button>
         </div>
     </section>
   </div>

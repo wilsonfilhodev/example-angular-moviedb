@@ -21,6 +21,10 @@ h1 {
   background-color: var(--primary-color);
 }
 
+.movie-header:hover {
+  cursor: pointer;
+}
+
 .movie-average {
   display: inline-flex;
   justify-content: center;
@@ -54,26 +58,15 @@ h1 {
 .movie-content {
   position: relative;
   padding: 0 1.5vmax 1vmax;
-  /* max-height: 12vmax; */
   margin: 2vmax 0;
 }
 
 .movie-content > p {
   font-family: var(--secondary-font);
-  /* max-height: 13vmax;
-  overflow: auto; */
 }
 
 .movie-buttons-genre {
   padding: 0 1.5vmax;
-}
-
-.movie-buttons-genre > .button {
-  border: solid 1px var(--primary-color);
-  background-color: white;
-  border-radius: 1.5vmax;
-  padding: 0 1.5vmax;
-  margin-right: 1vmax;
 }
 
 .section-content {
@@ -89,6 +82,10 @@ h1 {
 
 .poster {
   width: 100%;
+}
+
+.poster:hover {
+  cursor: pointer;
 }
 
 /* Medias Querie */
@@ -125,13 +122,6 @@ h1 {
   .movie-release > p {
     margin-top: .2rem;
     font-size: 1rem;
-  }
-
-  .movie-buttons-genre > .button {
-    border: solid 1px var(--primary-color);
-    border-radius: .75rem;
-    padding: 0 1rem;
-    margin-right: .5rem;
   }
 
 }

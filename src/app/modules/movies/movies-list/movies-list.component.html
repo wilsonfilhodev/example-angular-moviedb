@@ -1,9 +1,13 @@
 <div class="container">
-    <section class="container-search">
-        <input name="searchInput" [(ngModel)]="searchInput" placeholder="Busque um filme por nome, ano ou gênero...">
+    <section>
+        <app-search-box (loading)="loading = $event" (results)="updateResults($event)"></app-search-box>
     </section>
 
-    <section>
+    <div class="container-loading" *ngIf="loading">
+        <img src='assets/img/loading.svg' />
+    </div>
+
+    <section *ngIf="!loading">
       <div class="container-movies" *ngFor="let movie of movies | paginate: { itemsPerPage: 5, currentPage: p }">
           <app-movie [movie]="movie" (goToSelectMovie)="goToMovie($event)" (goToSelectGenre)="selectGenre($event)"></app-movie>
       </div>
