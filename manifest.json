@@ -4,8 +4,9 @@
   "theme_color": "#116192",
   "background_color": "#ffffff",
   "display": "browser",
+  ​​"orientation": "portrait",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "/example-angular-moviedb",
   "icons": [
     {
       "src": "assets/icons/icon-72x72.png",
