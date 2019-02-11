@@ -1,0 +1,89 @@
+{
+  "configVersion": 1,
+  "index": "/example-angular-moviedb/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/example-angular-moviedb/es2015-polyfills.12eccedba99646c7daca.js",
+        "/example-angular-moviedb/favicon.ico",
+        "/example-angular-moviedb/index.html",
+        "/example-angular-moviedb/main.5079ae4a726fbb721ab6.js",
+        "/example-angular-moviedb/polyfills.407a467dedb63cfdd103.js",
+        "/example-angular-moviedb/runtime.a5dd35324ddfd942bef1.js",
+        "/example-angular-moviedb/styles.36df8aadbcaa30f7cfcc.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/example-angular-moviedb/Abel-Regular.7e3d2a92473b14dea460.ttf",
+        "/example-angular-moviedb/Lato-Light.5b761f2d1e4259ea6ac7.ttf",
+        "/example-angular-moviedb/assets/fonts/Abel-Regular.ttf",
+        "/example-angular-moviedb/assets/fonts/Lato-Light.ttf",
+        "/example-angular-moviedb/assets/fonts/Lato-Regular.ttf",
+        "/example-angular-moviedb/assets/icons/icon-128x128.png",
+        "/example-angular-moviedb/assets/icons/icon-144x144.png",
+        "/example-angular-moviedb/assets/icons/icon-152x152.png",
+        "/example-angular-moviedb/assets/icons/icon-192x192.png",
+        "/example-angular-moviedb/assets/icons/icon-384x384.png",
+        "/example-angular-moviedb/assets/icons/icon-512x512.png",
+        "/example-angular-moviedb/assets/icons/icon-72x72.png",
+        "/example-angular-moviedb/assets/icons/icon-96x96.png",
+        "/example-angular-moviedb/assets/img/loading.svg",
+        "/example-angular-moviedb/assets/img/no-poster.jpg",
+        "/example-angular-moviedb/assets/img/poste-example.jpg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/example-angular-moviedb/Abel-Regular.7e3d2a92473b14dea460.ttf": "3ccc61028c66b2866400315e38301ce5df27e06a",
+    "/example-angular-moviedb/Lato-Light.5b761f2d1e4259ea6ac7.ttf": "6eb95108fef81bd8cfbf7e20d4ca0634e5989019",
+    "/example-angular-moviedb/assets/fonts/Abel-Regular.ttf": "3ccc61028c66b2866400315e38301ce5df27e06a",
+    "/example-angular-moviedb/assets/fonts/Lato-Light.ttf": "6eb95108fef81bd8cfbf7e20d4ca0634e5989019",
+    "/example-angular-moviedb/assets/fonts/Lato-Regular.ttf": "127f241871a9fe42cd8d073a0835410f3824d57c",
+    "/example-angular-moviedb/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "/example-angular-moviedb/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "/example-angular-moviedb/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "/example-angular-moviedb/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "/example-angular-moviedb/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/example-angular-moviedb/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/example-angular-moviedb/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "/example-angular-moviedb/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "/example-angular-moviedb/assets/img/loading.svg": "11d6e896eaaadd5ce37400116650e1272ec28f19",
+    "/example-angular-moviedb/assets/img/no-poster.jpg": "8600966aef3153e5f346a2714f1760ac9e488137",
+    "/example-angular-moviedb/assets/img/poste-example.jpg": "669bf177198413e8f02a7427f0a8214f123fbbc6",
+    "/example-angular-moviedb/es2015-polyfills.12eccedba99646c7daca.js": "e546b81560cf13f04d7e6a3944e5e3087f131356",
+    "/example-angular-moviedb/favicon.ico": "7cb7d5aeae4949d186b9aa71c006e2f0174a1693",
+    "/example-angular-moviedb/index.html": "7fa035d05422acc3ac2d2ceb737640edbd1aff19",
+    "/example-angular-moviedb/main.5079ae4a726fbb721ab6.js": "7fab00669b1614c63ea7aeb2aae8f7fb95b3e648",
+    "/example-angular-moviedb/polyfills.407a467dedb63cfdd103.js": "ffa449995bf2eba2ccd0a002417214f7eb75e7b5",
+    "/example-angular-moviedb/runtime.a5dd35324ddfd942bef1.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/example-angular-moviedb/styles.36df8aadbcaa30f7cfcc.css": "8fe16e822ee1b100ab2bf4f18961bd6195d9f391"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
