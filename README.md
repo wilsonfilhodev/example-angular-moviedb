@@ -3,11 +3,11 @@
     <img src="/src/assets/img/angular_moviedb.png?raw=true" alt="Angular and Moviedb" width=300>
   </a>
 
-  <h3 align="center">Angular 7 and Moviedb API</h3>
+  <h3 align="center">PWA Moviedb</h3>
   <h4 align="center">https://pwa-moviedb.herokuapp.com/movie</h4>
 
   <p align="center">
-    This example app shows how to build a basic app with Angular 7 and Moviedb API.
+    This example app shows how to build a basic pwa with Angular 7 and Moviedb API.
   </p>
 </p>
 
@@ -44,6 +44,7 @@
 * Search bar to look movies for name or genre
 * Show details of movies
 * Responsive layout (CSS Grid)
+* PWA Features
 
 ## Authors
 
