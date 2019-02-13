@@ -20,7 +20,6 @@ export class MoviesListComponent implements OnInit {
   public page = 1;
 
   constructor(
-    private loadingService: NgxUiLoaderService,
     private apiService: ApiService,
     private router: Router
     ) { }
@@ -50,12 +49,10 @@ export class MoviesListComponent implements OnInit {
   }
 
   private async initialize() {
-    this.loadingService.start();
     const responseGenres = await this.apiService.getGenres();
     this.mapGenres = new Map(responseGenres.genres.map((genre: any) => [genre.id, genre.name]));
     const responseMovies = await this.apiService.getPopularMovies(1);
     this.movies = this.parseResponseToMovie(responseMovies);
-    this.loadingService.stop();
   }
 
   private parseResponseToMovie(res: any): Movie[] {

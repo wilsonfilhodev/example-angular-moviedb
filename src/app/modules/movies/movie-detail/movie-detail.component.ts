@@ -4,6 +4,7 @@ import { Movie } from './../../../models/movie';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-movie-detail',
@@ -20,6 +21,7 @@ export class MovieDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private apiService: ApiService,
     public domSanitizer: DomSanitizer,
+    private loadingService: NgxUiLoaderService,
   ) { }
 
   ngOnInit() {
@@ -31,11 +33,15 @@ export class MovieDetailComponent implements OnInit {
   }
 
   private async getMovie(id: number) {
+    this.loadingService.start();
     const response = await this.apiService.getMovieById(id);
     if (response) {
       this.movie = this.parseResponseToMovie(response);
       const keyTrailer = await this.apiService.getTrailer(id);
       this.trailer = this.getTrailerMovie(keyTrailer);
+      this.loadingService.stop();
+    } else {
+      this.loadingService.stop();
     }
   }
 
