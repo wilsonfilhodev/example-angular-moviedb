@@ -4,7 +4,7 @@
   </a>
 
   <h3 align="center">Angular 7 and Moviedb API</h3>
-  <h4 align="center">https://wilsonfilhodev.github.io/example-angular-moviedb</h4>
+  <h4 align="center">https://pwa-moviedb.herokuapp.com/movie</h4>
 
   <p align="center">
     This example app shows how to build a basic app with Angular 7 and Moviedb API.
